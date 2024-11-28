@@ -18,10 +18,6 @@
 //
 simple Disk
 {
-     parameters:
-         int czas_przeszukiwania_i_oczekiwania @unit("us");
-         int czas_transmisji @unit("us");
      gates:
          inout oddo_casche;
-         
 }

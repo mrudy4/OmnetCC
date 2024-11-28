@@ -17,11 +17,6 @@
 // TODO auto-generated module
 //
 simple Klient
-{	
-    parameters:
-        volatile int wielkosc_danych;	//volatile - wartość zmiennej może zmieniać się nagle i wielokrotnie
-        volatile int czas_namyslu;
-    gates: 
-        inout oddo_komputera;
-        //inout oddo_cpu;
+{
+    gates: inout bramaSwitch;
 }

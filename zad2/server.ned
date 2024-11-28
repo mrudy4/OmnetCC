@@ -16,20 +16,11 @@
 //
 // TODO auto-generated module
 //
-
-//simple Server
-//{
-//    gates: 
-//        inout oddo_klienta;	
-//        inout oddo_cpu;
-//        
-//}
-
 module Server
 {
     @display("bgb=617,392");
     gates:
-        inout oddo_klienta;
+        inout oddo_switch;
 
     submodules:
         cpu: Cpu {
@@ -40,12 +31,14 @@ module Server
             parameters:
                 @display("p=74,91;i=device/disk");
         }
-        bufor: Casche {
+        bufor: Cache {
             parameters:
                 @display("p=183,158;i=block/boundedqueue");
         }
+        
+        
     connections:
-        oddo_klienta <--> cpu.oddo_klienta;
+        oddo_switch <--> cpu.oddo_klienta;
         cpu.oddo_casche <--> bufor.oddo_procesora;
         bufor.oddo_dysku <--> disk.oddo_casche;
 }

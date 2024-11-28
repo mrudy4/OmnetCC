@@ -13,8 +13,8 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-#ifndef __ZAD2_CPU_H_
-#define __ZAD2_CPU_H_
+#ifndef __TEST_CPU_H_
+#define __TEST_CPU_H_
 
 #include <omnetpp.h>
 
@@ -23,26 +23,11 @@ using namespace omnetpp;
 /**
  * TODO - Generated class
  */
-/*
 class Cpu : public cSimpleModule
 {
   protected:
     virtual void initialize() override;
     virtual void handleMessage(cMessage *msg) override;
-};
-*/
-
-class Cpu : public cSimpleModule {
-protected:
-    virtual void initialize();
-    virtual void handleMessage(cMessage *msg);
-public:
-     Cpu() : cSimpleModule(32768) {}
-     cQueue kolejka;
-     cPacket *zadanie;
-     virtual void activity();
-     virtual void obsluz_zad_na_procesorze(cPacket *);
-     virtual void wysyla_do_klient(cPacket *);
 };
 
 #endif

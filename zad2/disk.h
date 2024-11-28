@@ -13,11 +13,10 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-#ifndef __ZAD2_DISK_H_
-#define __ZAD2_DISK_H_
+#ifndef __TEST_DISK_H_
+#define __TEST_DISK_H_
 
 #include <omnetpp.h>
-
 
 using namespace omnetpp;
 
@@ -29,11 +28,6 @@ class Disk : public cSimpleModule
   protected:
     virtual void initialize() override;
     virtual void handleMessage(cMessage *msg) override;
-  public:
-    cQueue kolejka;
-    cPacket *zadanie;
-    virtual void activity();
-    virtual void wysylanie_do_cache(cPacket *);
 };
 
 #endif

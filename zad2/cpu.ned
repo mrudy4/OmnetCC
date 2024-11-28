@@ -18,11 +18,7 @@
 //
 simple Cpu
 {
-    parameters:
-         int czas_wyszukiwania_danych @unit("us");
-         int czas_transmisji_do_klienta @unit("us");
-    gates:
-		 //inout oddo_komputera;
+        gates:
 		 inout oddo_klienta;
 		 inout oddo_casche;
 }

@@ -1,0 +1,1 @@
+-O0 -Wall -glldb -fstandalone-debug   -MMD -MP -MF .d -I/home/linuxbrew/.linuxbrew/include -fPIC  -Wno-deprecated-register -Wno-unused-function -fno-omit-frame-pointer -DBACKWARD_HAS_DW=1 -DOMNETPPLIBS_IMPORT  -I. -I/home/maciejrudy/Omnet++/omnetpp-6.1-linux-x86_64/omnetpp-6.1/include

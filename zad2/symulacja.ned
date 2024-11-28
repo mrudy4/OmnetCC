@@ -22,43 +22,32 @@ network Symulacja
         komputer: Server {
 
             //@display("p=124,247");
-            @display("p=163,201;i=device/server2");
+            @display("p=422,102;i=device/server2");
         }
 
 
-        casche: Casche {
+        host1: Klient {
             parameters:
-                procent_danych_w_pamieci = uniform(1, 10);
-                @display("p=370,191;i=block/boundedqueue");
-                 //display("p=438,66");
+                //wielkosc_danych = lognormal(40,5,0);
+                //czas_namyslu = exponential(0.5);
+                @display("p=153,47;i=device/pc2");
         }
 
-        host: Klient {
+        host2: Klient {
             parameters:
-                wielkosc_danych = lognormal(40,5,0);
-                czas_namyslu = exponential(0.5);
-                @display("p=163,91;i=device/pc2");
+                //wielkosc_danych = lognormal(40,5,0);
+                //czas_namyslu = exponential(0.5);
+                @display("p=61,112;i=device/pc2");
         }
 
-        disk: Disk {
-            parameters:
-                czas_transmisji = 14us;
-                czas_przeszukiwania_i_oczekiwania = 0.028us;
-                @display("p=465,168;i=device/disk");
-                //@display("p=438,205");
-        }
-
-        cpu: Cpu {
-            parameters:
-                czas_wyszukiwania_danych = 0.527us;
-                czas_transmisji_do_klienta = 0.00024us;
-                @display("p=360,90;i=device/cpu");
-            //@display("p=322,66");
+        switch: Switch {
+            @display("p=249,127");
         }
 
     connections:
-        komputer.oddo_klienta <--> host.oddo_komputera;
-        //host.oddo_cpu <--> cpu.oddo_klienta;
-        //cpu.oddo_casche <--> casche.oddo_procesora;
-        //casche.oddo_dysku <--> disk.oddo_casche;
+        host1.bramaSwitch <--> switch.bramaHost1;
+        host2.bramaSwitch <--> switch.bramaHost2;
+        komputer.oddo_switch <--> switch.bramaKomputer;
+
+
 }

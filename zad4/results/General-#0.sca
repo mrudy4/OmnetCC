@@ -1,0 +1,40 @@
+version 3
+run General-0-20241128-21:15:49-15266
+attr configname General
+attr datetime 20241128-21:15:49
+attr datetimef 20241128-211549
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Symulacja
+attr processid 15266
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config network Symulacja
+config *.host1.wielkoscZadania normal(5000,333)
+config *.host2.wielkoscZadania normal(5000,333)
+config *.host1.czasMiedzyZadaniami exponential(0.2)
+config *.host2.czasMiedzyZadaniami exponential(0.2)
+config **.cpu.jednostkowyCzasObslugi 0.000240
+config **.disk.jednostkowyCzasObslugi 0.000410
+
+par Symulacja.komputer.cpu typename "\"Cpu\""
+par Symulacja.komputer.cpu jednostkowyCzasObslugi 0.00024
+par Symulacja.komputer.disk typename "\"Disk\""
+par Symulacja.komputer.disk jednostkowyCzasObslugi 0.00041
+par Symulacja.komputer typename "\"Server\""
+par Symulacja.host1 typename "\"Klient\""
+par Symulacja.host1 czasMiedzyZadaniami exponential(0.2)
+par Symulacja.host1 wielkoscZadania 2.2
+par Symulacja.host2 typename "\"Klient\""
+par Symulacja.host2 czasMiedzyZadaniami exponential(0.2)
+par Symulacja.host2 wielkoscZadania 2.2
+par Symulacja.switch typename "\"Switch\""
+par Symulacja typename "\"Symulacja\""
+

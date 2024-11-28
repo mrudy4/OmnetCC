@@ -1,0 +1,29 @@
+version 3
+run General-0-20241116-12:49:03-13935
+attr configname General
+attr datetime 20241116-12:49:03
+attr datetimef 20241116-124903
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Symulacja
+attr processid 13935
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config network Symulacja
+
+par Symulacja.komputer.cpu typename "\"Cpu\""
+par Symulacja.komputer.disk typename "\"Disk\""
+par Symulacja.komputer.bufor typename "\"Cache\""
+par Symulacja.komputer typename "\"Server\""
+par Symulacja.host1 typename "\"Klient\""
+par Symulacja.host2 typename "\"Klient\""
+par Symulacja.switch typename "\"Switch\""
+par Symulacja typename "\"Symulacja\""
+

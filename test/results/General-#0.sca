@@ -1,0 +1,61 @@
+version 3
+run General-0-20241128-19:35:32-10781
+attr configname General
+attr datetime 20241128-19:35:32
+attr datetimef 20241128-193532
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Symulator
+attr processid 10781
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config network Symulator
+config *.klient.wielkoscZadania normal(5000,333)
+config *.klient.czasMiedzyZadaniami exponential(0.2)
+config **.cpu.jednostkowyCzasObslugi 0.000240
+config **.hdd.jednostkowyCzasObslugi 0.000410
+
+par Symulator.kartaSieciowa.doSerwera.channel typename "\"ned.DatarateChannel\""
+par Symulator.kartaSieciowa.doSerwera.channel disabled false
+attr mutable ""
+par Symulator.kartaSieciowa.doSerwera.channel delay 0s
+attr mutable ""
+attr unit s
+par Symulator.kartaSieciowa.doSerwera.channel datarate 1e+08bps
+attr mutable ""
+attr unit bps
+par Symulator.kartaSieciowa.doSerwera.channel ber 0
+attr mutable ""
+par Symulator.kartaSieciowa.doSerwera.channel per 0
+attr mutable ""
+par Symulator.kartaSieciowa.doKlienta.channel typename "\"ned.DatarateChannel\""
+par Symulator.kartaSieciowa.doKlienta.channel disabled false
+attr mutable ""
+par Symulator.kartaSieciowa.doKlienta.channel delay 0s
+attr mutable ""
+attr unit s
+par Symulator.kartaSieciowa.doKlienta.channel datarate 1e+08bps
+attr mutable ""
+attr unit bps
+par Symulator.kartaSieciowa.doKlienta.channel ber 0
+attr mutable ""
+par Symulator.kartaSieciowa.doKlienta.channel per 0
+attr mutable ""
+par Symulator.klient typename "\"Klient\""
+par Symulator.klient czasMiedzyZadaniami exponential(0.2)
+par Symulator.klient wielkoscZadania "normal(5000, 333)"
+par Symulator.serwer.cpu typename "\"Procesor\""
+par Symulator.serwer.cpu jednostkowyCzasObslugi 0.00024
+par Symulator.serwer.hdd typename "\"Dysk\""
+par Symulator.serwer.hdd jednostkowyCzasObslugi 0.00041
+par Symulator.serwer typename "\"Serwer\""
+par Symulator.kartaSieciowa typename "\"KartaSieciowa\""
+par Symulator typename "\"Symulator\""
+
