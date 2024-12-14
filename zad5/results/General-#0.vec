@@ -1,0 +1,39 @@
+version 3
+run General-0-20241214-11:23:12-9873
+attr configname General
+attr datetime 20241214-11:23:12
+attr datetimef 20241214-112312
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Symulacja
+attr processid 9873
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config network Symulacja
+config *.host1.wielkoscZadania normal(5000,333)
+config *.host2.wielkoscZadania normal(5000,333)
+config *.host1.czasMiedzyZadaniami exponential(0.2)
+config *.host2.czasMiedzyZadaniami exponential(0.2)
+config **.cpu.jednostkowyCzasObslugi 0.000240
+config **.disk.jednostkowyCzasObslugi 0.000410
+
+vector 0 Symulacja.statsK1 czasyOpowiedzi ETV
+vector 1 Symulacja.statsK2 czasyOpowiedzi ETV
+0	18	0.00605608	0.00605608
+0	35	0.165230980913	0.00605608
+0	57	0.416417132522	0.00605608
+0	79	0.601061758816	0.00605608
+0	90	0.758501986812	0.00605608
+1	24	0.011056285	0.011056285
+1	46	0.185768157697	0.00605608
+1	68	0.557689000112	0.00605608
+1	101	0.947998067289	0.0060560799999999
+1	112	1.058207764623	0.00605608
+

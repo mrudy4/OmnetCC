@@ -1,0 +1,80 @@
+version 3
+run General-0-20241207-14:29:17-32268
+attr configname General
+attr datetime 20241207-14:29:17
+attr datetimef 20241207-142917
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Symulator
+attr processid 32268
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config network Symulator
+config *.klient.wielkoscZadania normal(5000,333)
+config *.klient.czasMiedzyZadaniami exponential(0.2)
+config **.cpu.jednostkowyCzasObslugi 0.000240
+config **.hdd.jednostkowyCzasObslugi 0.000410
+
+par Symulator.przelacznik.doKlienta[0].channel typename "\"ned.DatarateChannel\""
+par Symulator.przelacznik.doKlienta[0].channel disabled false
+attr mutable ""
+par Symulator.przelacznik.doKlienta[0].channel delay 0s
+attr mutable ""
+attr unit s
+par Symulator.przelacznik.doKlienta[0].channel datarate 1e+08bps
+attr mutable ""
+attr unit bps
+par Symulator.przelacznik.doKlienta[0].channel ber 0
+attr mutable ""
+par Symulator.przelacznik.doKlienta[0].channel per 0
+attr mutable ""
+par Symulator.przelacznik.doKlienta[1].channel typename "\"ned.DatarateChannel\""
+par Symulator.przelacznik.doKlienta[1].channel disabled false
+attr mutable ""
+par Symulator.przelacznik.doKlienta[1].channel delay 0s
+attr mutable ""
+attr unit s
+par Symulator.przelacznik.doKlienta[1].channel datarate 1e+08bps
+attr mutable ""
+attr unit bps
+par Symulator.przelacznik.doKlienta[1].channel ber 0
+attr mutable ""
+par Symulator.przelacznik.doKlienta[1].channel per 0
+attr mutable ""
+par Symulator.przelacznik.doSerwera.channel typename "\"ned.DatarateChannel\""
+par Symulator.przelacznik.doSerwera.channel disabled false
+attr mutable ""
+par Symulator.przelacznik.doSerwera.channel delay 0s
+attr mutable ""
+attr unit s
+par Symulator.przelacznik.doSerwera.channel datarate 1e+08bps
+attr mutable ""
+attr unit bps
+par Symulator.przelacznik.doSerwera.channel ber 0
+attr mutable ""
+par Symulator.przelacznik.doSerwera.channel per 0
+attr mutable ""
+par Symulator.klient1 typename "\"Klient\""
+par Symulator.klient1 address 0
+par Symulator.klient1 czasMiedzyZadaniami 3
+par Symulator.klient1 wielkoscZadania 100
+par Symulator.klient2 typename "\"Klient\""
+par Symulator.klient2 address 1
+par Symulator.klient2 czasMiedzyZadaniami 7
+par Symulator.klient2 wielkoscZadania 100
+par Symulator.serwer.cpu typename "\"Procesor\""
+par Symulator.serwer.cpu jednostkowyCzasObslugi 0.00024
+par Symulator.serwer.hdd typename "\"Dysk\""
+par Symulator.serwer.hdd jednostkowyCzasObslugi 0.00041
+par Symulator.serwer typename "\"Serwer\""
+par Symulator.przelacznik typename "\"KartaSieciowa\""
+par Symulator.blokStatystyk typename "\"Statystyki\""
+par Symulator typename "\"Symulator\""
+

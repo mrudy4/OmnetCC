@@ -1,8 +1,8 @@
 version 3
-run General-0-20241207-11:12:43-6196
+run General-0-20241214-11:23:12-9873
 attr configname General
-attr datetime 20241207-11:12:43
-attr datetimef 20241207-111243
+attr datetime 20241214-11:23:12
+attr datetimef 20241214-112312
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -10,7 +10,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network Symulacja
-attr processid 6196
+attr processid 9873
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -22,10 +22,12 @@ config *.host2.wielkoscZadania normal(5000,333)
 config *.host1.czasMiedzyZadaniami exponential(0.2)
 config *.host2.czasMiedzyZadaniami exponential(0.2)
 config **.cpu.jednostkowyCzasObslugi 0.000240
+config **.disk.jednostkowyCzasObslugi 0.000410
 
 par Symulacja.komputer.cpu typename "\"Cpu\""
 par Symulacja.komputer.cpu jednostkowyCzasObslugi 0.00024
 par Symulacja.komputer.disk typename "\"Disk\""
+par Symulacja.komputer.disk jednostkowyCzasObslugi 0.00041
 par Symulacja.komputer typename "\"Server\""
 par Symulacja.host1 typename "\"Klient\""
 par Symulacja.host1 czasMiedzyZadaniami exponential(0.2)
@@ -34,5 +36,7 @@ par Symulacja.host2 typename "\"Klient\""
 par Symulacja.host2 czasMiedzyZadaniami exponential(0.2)
 par Symulacja.host2 wielkoscZadania 2.2
 par Symulacja.switch typename "\"Switch\""
+par Symulacja.statsK1 typename "\"Statistics\""
+par Symulacja.statsK2 typename "\"Statistics\""
 par Symulacja typename "\"Symulacja\""
 
